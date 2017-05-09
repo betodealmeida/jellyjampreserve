@@ -4,8 +4,8 @@ JellyJamPreserve is a Raspberry Pi project that uses the [Jack Timemachine](http
 
 ## Requirements
 
-- **A Raspberry Pi**. Any Raspberry Pi should work. I used a Pi Zero because it's small and would fit in the enclosure I had.
-- **An SD card**. The files are recorded as WAV, and take approximately 10 MB per minute. I use a 32 GB micro SD card.
+- **A Raspberry Pi**. Any Raspberry Pi should work. I used a Pi 1 Model B because I had a few of them unused at home.
+- **An SD card**. The files are recorded as WAV, and take approximately 10 MB per minute. I use a 32 GB SD card.
 - **A USB sound card**. We need a way to capture sound. Any cheap USB soundcard should work, just make sure it has a stereo input. I use [this one](https://www.amazon.com/Behringer-U-Control-Ultra-Low-Interface-Software/dp/B0023BYDHK/ref=pd_cp_267_1?_encoding=UTF8&pd_rd_i=B0023BYDHK&pd_rd_r=75GMM5E61DTF7X07XWVM&pd_rd_w=oyXT9&pd_rd_wg=4cPAX&psc=1&refRID=75GMM5E61DTF7X07XWVM).
 - **A push button or switch**, to start/stop recording.
 - **An LED**, to indicate when the JellyJamPreserve is recording. Because LEDs are cool.
@@ -18,7 +18,7 @@ I'll make a pre-built image available here. In the meantime, follow the manual i
 
 ### Install Raspbian
 
-[Install Raspbian](https://www.google.com/search?q=install+raspbian).
+[Install Raspbian](https://www.google.com/search?q=install+raspbian). The instructions here are for Jessie.
 
 ### Expand filesystem
 
@@ -75,7 +75,7 @@ Log out and log in again.
     $ sudo apt-get update
     $ sudo apt-get install automake autoconf liblo-dev libgtk2.0-dev
     $ git clone https://github.com/swh/timemachine.git
-    $ ./configure LIBS="-lm" --disable-dash
+    $ ./autogen.sh LIBS="-lm" --disable-dash
     $ make
     $ sudo make install
 
