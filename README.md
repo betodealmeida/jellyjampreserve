@@ -1,13 +1,13 @@
 # JellyJamPreserve
 
-JellyJamPreserve is a Raspberry Pi project that uses the [Jack Timemachine](http://plugin.org.uk/timemachine/) to record audio on the click of button (or toggle of a switch). It continuously records audio into a 5 minute circular buffer, and when the button is clicked the buffer is dumped to a file and it starts recording audio to the file until the button is clicked again. This way you can preserve any cool improvisations by recording **sounds from the past**!
+JellyJamPreserve is a Raspberry Pi project that uses the [Jack Timemachine](http://plugin.org.uk/timemachine/) to record audio on the toggle of a switch. It continuously records audio into a 5 minute circular buffer, and when the button is clicked the buffer is dumped to a file and it starts recording audio to the file until the button is clicked again. This way you can preserve any cool improvisations by recording **sounds from the past**!
 
 ## Requirements
 
 - **A Raspberry Pi**. Any Raspberry Pi should work. I used a Pi 1 Model B because I had a few of them unused at home.
 - **An SD card**. The files are recorded as WAV, and take approximately 20 MB per minute. I use a 32 GB SD card.
 - **A USB sound card**. We need a way to capture sound. Any cheap USB soundcard should work, just make sure it has a stereo input. I use [this one](https://www.amazon.com/Behringer-U-Control-Ultra-Low-Interface-Software/dp/B0023BYDHK/ref=pd_cp_267_1?_encoding=UTF8&pd_rd_i=B0023BYDHK&pd_rd_r=75GMM5E61DTF7X07XWVM&pd_rd_w=oyXT9&pd_rd_wg=4cPAX&psc=1&refRID=75GMM5E61DTF7X07XWVM).
-- **A push button or switch**, to start/stop recording.
+- **A switch**, to start/stop recording.
 - **An LED**, to indicate when the JellyJamPreserve is recording. Because LEDs are cool.
 
 ## Pre-built image
