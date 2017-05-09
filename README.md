@@ -75,7 +75,7 @@ Log out and log in again.
     $ sudo apt-get update
     $ sudo apt-get install automake autoconf liblo-dev libgtk2.0-dev
     $ git clone https://github.com/swh/timemachine.git
-    $ ./autogen.sh LIBS="-lm" --disable-dash
+    $ ./autogen.sh LIBS="-lm" --disable-lash
     $ make
     $ sudo make install
 
