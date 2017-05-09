@@ -1,6 +1,8 @@
 # JellyJamPreserve
 
-JellyJamPreserve is a Raspberry Pi project that uses the [Jack Timemachine](http://plugin.org.uk/timemachine/) to record audio on the toggle of a switch. It continuously records audio into a 5 minute circular buffer, and when the button is clicked the buffer is dumped to a file and it starts recording audio to the file until the button is clicked again. This way you can preserve any cool improvisations by recording **sounds from the past**!
+JellyJamPreserve is a Raspberry Pi project that uses the [Jack Timemachine](http://plugin.org.uk/timemachine/) to record audio on the toggle of a switch. It continuously records audio into a 5 minute circular buffer, and when the switch is turned on the buffer is dumped to a file and it starts recording audio to the file until the switch is turned off. This way you can preserve any cool improvisations by recording **sounds from the past**!
+
+In other words, if you turn the switch on at 1:05 pm and turn it off at 1:30 pm you will have an audio file with a recording from 1:00 pm to 1:30 pm. If you come up with an amazing riff while playing your guitar just turn on the switch and keep playing.
 
 ## Requirements
 
@@ -37,7 +39,7 @@ Create the file `/etc/modprobe.d/alsa-base.conf` and add:
     # Does the reordering.
     options snd slots=snd_usb_audio,snd_bcm2835
     
-You can verify the order using the `aplay` command. The USB card should appear as card 0:
+You can verify the order using the `aplay` command. After a reboot the USB card should appear as card 0:
 
     $ aplay -l
     **** List of PLAYBACK Hardware Devices ****
@@ -75,6 +77,7 @@ Log out and log in again.
     $ sudo apt-get update
     $ sudo apt-get install automake autoconf liblo-dev libgtk2.0-dev
     $ git clone https://github.com/swh/timemachine.git
+    $ cd timemachine
     $ ./autogen.sh LIBS="-lm" --disable-lash
     $ make
     $ sudo make install
