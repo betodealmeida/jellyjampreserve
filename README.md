@@ -6,7 +6,7 @@ In other words, if you turn the switch on at 1:05 pm and turn it off at 1:30 pm 
 
 ## Requirements
 
-- **A Raspberry Pi**. Any Raspberry Pi should work. I used a Pi 1 Model B because I had a few of them unused at home.
+- **A Raspberry Pi**. Any Raspberry Pi should work. I use a Pi 1 Model B because I had a few of them unused at home.
 - **An SD card**. The files are recorded as WAV, and take approximately 20 MB per minute. I use a 32 GB SD card.
 - **A USB sound card**. We need a way to capture sound. Any cheap USB soundcard should work, just make sure it has a stereo input. I use [this one](https://www.amazon.com/Behringer-U-Control-Ultra-Low-Interface-Software/dp/B0023BYDHK/ref=pd_cp_267_1?_encoding=UTF8&pd_rd_i=B0023BYDHK&pd_rd_r=75GMM5E61DTF7X07XWVM&pd_rd_w=oyXT9&pd_rd_wg=4cPAX&psc=1&refRID=75GMM5E61DTF7X07XWVM).
 - **A switch**, to start/stop recording.
