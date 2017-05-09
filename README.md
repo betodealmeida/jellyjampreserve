@@ -81,6 +81,10 @@ Log out and log in again.
 
 ### Install Python
 
+    $ sudo apt-get update
+    $ sudo apt-get install python3 python3-pip
+    $ pip install python-osc
+
 ### Install the JellyJamPreserve script
 
 ## Wire it up
