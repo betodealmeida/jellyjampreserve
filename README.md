@@ -6,7 +6,7 @@ JellyJamPreserve is a Raspberry Pi project that uses the [Jack Timemachine](http
 
 - **A Raspberry Pi**. Any Raspberry Pi should work. I used a Pi Zero because it's small and would fit in the enclosure I had.
 - **An SD card**. The files are recorded as WAV, and take approximately 10 MB per minute. I use a 32 GB micro SD card.
-- **A USB sound card**. We need a way to capture sound. Any cheap USB soundcard should work. I use [this one](https://www.amazon.com/gp/product/B001MSS6CS/ref=oh_aui_search_detailpage?ie=UTF8&psc=1).
+- **A USB sound card**. We need a way to capture sound. Any cheap USB soundcard should work, just make sure it has a stereo input. I use [this one](https://www.amazon.com/Behringer-U-Control-Ultra-Low-Interface-Software/dp/B0023BYDHK/ref=pd_cp_267_1?_encoding=UTF8&pd_rd_i=B0023BYDHK&pd_rd_r=75GMM5E61DTF7X07XWVM&pd_rd_w=oyXT9&pd_rd_wg=4cPAX&psc=1&refRID=75GMM5E61DTF7X07XWVM).
 - **A push button or switch**, to start/stop recording.
 - **An LED**, to indicate when the JellyJamPreserve is recording. Because LEDs are cool.
 
@@ -68,8 +68,19 @@ Edit the file `/etc/security/limits.conf` and add at the bottom:
     @audio - memlock 256000
     @audio - rtprio 75
 
-### Install Timemachine 
+Log out and log in again.
+
+### Install Timemachine
+
+    $ sudo apt-get update
+    $ sudo apt-get install automake autoconf liblo-dev libgtk2.0-dev
+    $ git clone https://github.com/swh/timemachine.git
+    $ ./configure LIBS="-lm" --disable-dash
+    $ make
+    $ sudo make install
 
 ### Install Python
+
+### Install the JellyJamPreserve script
 
 ## Wire it up
