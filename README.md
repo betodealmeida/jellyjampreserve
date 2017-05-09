@@ -8,6 +8,10 @@ JellyJamPreserve is a Raspberry Pi project that uses the [Jack Timemachine](http
 
 ### Install Raspbian
 
+### Change default sound card
+
+### Expand filesystem
+
 ### Install jackd2
 
 ### Install Timemachine 
