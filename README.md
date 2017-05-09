@@ -37,7 +37,7 @@ Create the file `/etc/modprobe.d/alsa-base.conf` and add:
     # Does the reordering.
     options snd slots=snd_usb_audio,snd_bcm2835
     
-You can verify the order using the `aplay` command. The USB card should appear as card 0:
+You can verify the order using the `aplay` command. After a reboot the USB card should appear as card 0:
 
     $ aplay -l
     **** List of PLAYBACK Hardware Devices ****
