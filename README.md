@@ -4,6 +4,8 @@ JellyJamPreserve is a Raspberry Pi project that uses the [Jack Timemachine](http
 
 In other words, if you turn the switch on at 1:05 pm and turn it off at 1:30 pm you will have an audio file with a recording from 1:00 pm to 1:30 pm. If you come up with an amazing riff while playing your guitar just turn on the switch and keep playing.
 
+![The JellyJamPreserve](https://raw.githubusercontent.com/robertodealmeida/jellyjampreserve/master/images/jellyjampreserve.jpg)
+
 ## Requirements
 
 - **A Raspberry Pi**. Any Raspberry Pi should work. I use a Pi 1 Model B because I had a few of them unused at home.
@@ -111,7 +113,16 @@ By adding this line:
 1. The LED is connected to GPIO 3 (pin 5) and to ground with a 47R resistor.
 2. GPIO 2 (pin 3) has a 10K pull-up resistor, and is connected to the ground through the switch.
 
-![Connecting the switch and the LED](https://raw.githubusercontent.com/robertodealmeida/jellyjampreserve/master/wiring.png)
+![Fritzing diagram](https://raw.githubusercontent.com/robertodealmeida/jellyjampreserve/master/images/fritzing.png)
+
+Here's how I did it: it's slightly different from the Fritzing diagram:
+
+![Connecting the switch and the LED](https://raw.githubusercontent.com/robertodealmeida/jellyjampreserve/master/images/wiring.jpg)
+
+- White wire: LED anode to GPIO 3 (pin 5)
+- Black wire: switch to ground (pin 6)
+- Yellow wire: switch to GPIO 2 (pin 3)
+- Red wire: 10K resistor to 5V (pin 4)
 
 ## Getting the files
 
