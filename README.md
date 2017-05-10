@@ -22,7 +22,7 @@ I'll make a pre-built image available here. In the meantime, follow the manual i
 
 ### Install Raspbian
 
-[Install Raspbian](https://www.google.com/search?q=install+raspbian). The instructions below are for Raspbian Jessie.
+[Install Raspbian](https://www.google.com/search?q=install+raspbian) and make sure you can log into the Raspberry Pi. The instructions below are for Raspbian Jessie.
 
 ### Expand filesystem
 
@@ -126,4 +126,4 @@ Here's how I did it, slightly different from the Fritzing diagram:
 
 ## Getting the files
 
-Work in progress.
+There are many ways to get the recordings from the Pi. You can have Dropbox or [Syncthing](https://syncthing.net/) running in the Pi to automatically synchronize the files with another machine. I prefer to just use `scp` in Linux (in Windows you can use [WinSCP](https://winscp.net/eng/index.php)). The Pi is available at the address `jellyjampreserve`, and you can log in as user `pi`, password `raspberry`.
