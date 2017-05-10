@@ -82,11 +82,23 @@ Log out and log in again.
     $ make
     $ sudo make install
 
+### Create `/dev/gpiomem`
+
+    $ sudo apt-get install rpi-update
+    $ sudo rpi-update
+
 ### Install Python and dependencies
 
     $ sudo apt-get update
     $ sudo apt-get install python3 python3-pip
-    $ sudo pip3 install python-osc RPIO
+    
+### Install Python-OSC
+
+    $ sudo pip3 install python-osc
+    
+### Install RPi.GPIO
+
+    $ sudo pip3 install RPi.GPIO
 
 ### Install the JellyJamPreserve script
 
