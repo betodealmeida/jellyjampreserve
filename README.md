@@ -74,7 +74,7 @@ Log out and log in again.
 
 ### Install Timemachine
 
-    $ sudo apt-get install automake autoconf liblo-dev libgtk2.0-dev
+    $ sudo apt-get install automake autoconf liblo-dev libgtk2.0-dev tmux
     $ git clone https://github.com/swh/timemachine.git
     $ cd timemachine
     $ ./autogen.sh LIBS="-lm" --disable-lash
