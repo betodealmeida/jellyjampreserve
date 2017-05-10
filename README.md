@@ -104,6 +104,6 @@ And to have it start at boot:
     
 Add this line:
 
-    @reboot /home/pi/jellyjampreserve/start.sh
+    @reboot /home/pi/jellyjampreserve/start.sh >> /home/pi/jellyjampreserve.log
 
 ## Wire it up
