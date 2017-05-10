@@ -107,3 +107,5 @@ Add this line:
     @reboot /home/pi/jellyjampreserve/start.sh >> /home/pi/jellyjampreserve.log
 
 ## Wire it up
+
+![Connecting the switch and the LED](https://raw.githubusercontent.com/robertodealmeida/jellyjampreserve/master/wiring.png)
