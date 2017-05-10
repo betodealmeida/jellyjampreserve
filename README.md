@@ -115,7 +115,7 @@ By adding this line:
 
 ![Fritzing diagram](https://raw.githubusercontent.com/robertodealmeida/jellyjampreserve/master/images/fritzing.png)
 
-Here's how I did it: it's slightly different from the Fritzing diagram:
+Here's how I did it, slightly different from the Fritzing diagram:
 
 ![Connecting the switch and the LED](https://raw.githubusercontent.com/robertodealmeida/jellyjampreserve/master/images/wiring.jpg)
 
