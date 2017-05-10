@@ -1,16 +1,17 @@
 #!/bin/bash
 
-# jack server
+# start the jack server
 echo "Starting JACK server"
 /usr/local/bin/jackd -R -dalsa -dhw:0 -r48000 -p1024 -n3 &
 
-# timemachine
+# run timemachine in tmux, since it waits for input
 mkdir -p /home/pi/recordings/
 sleep 5
 echo "Starting Timemachine"
-timemachine -i -t 300 -f wav -p /home/pi/recordings/ &
+tmux new-session -d -s timemachine 'timemachine -i -t 300 -f wav -p /home/pi/recordings/'
 
 # connections
+echo "Waiting before setting up connections..."
 sleep 5
 echo "Connecting system capture to playback"
 jack_connect system:capture_1 system:playback_1
