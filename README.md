@@ -126,4 +126,4 @@ Here's how I did it, slightly different from the Fritzing diagram:
 
 ## Getting the files
 
-There are many ways to get the recordings from the Pi. You can have Dropbox or [Syncthing](https://syncthing.net/) running in the Pi to automatically synchronize the files with another machine. I prefer to just use `scp` in Linux (in Windows you can use [WinSCP](https://winscp.net/eng/index.php)). The Pi is available at the address `jellyjampreserve`, and you can log in as user `pi`, password `raspberry`.
+There are many ways to get the recordings from the Pi. You can have Dropbox or [Syncthing](https://syncthing.net/) running in the Pi to automatically synchronize the files with another machine. I prefer to just use `scp` in Linux (in Windows you can use [WinSCP](https://winscp.net/eng/index.php)). The Pi is available at the address `jellyjampreserve.local`, and you can log in as user `pi`, password `raspberry`.
