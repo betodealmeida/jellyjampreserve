@@ -90,4 +90,6 @@ Log out and log in again.
 
 ### Install the JellyJamPreserve script
 
+    $ git clone https://github.com/robertodealmeida/jellyjampreserve.git
+
 ## Wire it up
