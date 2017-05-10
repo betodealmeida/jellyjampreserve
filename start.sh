@@ -6,11 +6,11 @@ echo "Starting JACK server"
 
 # timemachine
 mkdir -p /home/pi/recordings/
+sleep 5
 echo "Starting Timemachine"
 timemachine -i -t 300 -f wav -p /home/pi/recordings/ &
 
 # connections
-echo "Waiting before setting up connections..."
 sleep 5
 echo "Connecting system capture to playback"
 jack_connect system:capture_1 system:playback_1
