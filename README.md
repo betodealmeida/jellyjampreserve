@@ -102,9 +102,9 @@ And to have it start at boot:
 
     $ crontab -e
     
-Add this line:
+By adding this line:
 
-    @reboot /home/pi/jellyjampreserve/start.sh >> /home/pi/jellyjampreserve.log
+    @reboot /home/pi/jellyjampreserve/start.sh >> /home/pi/jellyjampreserve.log 2>&1
 
 ## Wire it up
 
