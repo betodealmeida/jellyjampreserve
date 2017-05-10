@@ -108,4 +108,7 @@ Add this line:
 
 ## Wire it up
 
+1. The LED is connected to GPIO 3 (pin 5) and to ground with a 47R resistor.
+2. GPIO 2 (pin 3) has a 10K pull-up resistor, and is connected to the ground through the switch.
+
 ![Connecting the switch and the LED](https://raw.githubusercontent.com/robertodealmeida/jellyjampreserve/master/wiring.png)
