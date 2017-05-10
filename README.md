@@ -20,7 +20,7 @@ I'll make a pre-built image available here. In the meantime, follow the manual i
 
 ### Install Raspbian
 
-[Install Raspbian](https://www.google.com/search?q=install+raspbian). The instructions here are for Jessie.
+[Install Raspbian](https://www.google.com/search?q=install+raspbian). The instructions below are for Raspbian Jessie.
 
 ### Expand filesystem
 
@@ -112,3 +112,7 @@ By adding this line:
 2. GPIO 2 (pin 3) has a 10K pull-up resistor, and is connected to the ground through the switch.
 
 ![Connecting the switch and the LED](https://raw.githubusercontent.com/robertodealmeida/jellyjampreserve/master/wiring.png)
+
+## Getting the files
+
+Work in progress.
