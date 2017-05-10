@@ -74,13 +74,14 @@ Log out and log in again.
 
 ### Install Timemachine
 
-    $ sudo apt-get update
     $ sudo apt-get install automake autoconf liblo-dev libgtk2.0-dev
     $ git clone https://github.com/swh/timemachine.git
     $ cd timemachine
     $ ./autogen.sh LIBS="-lm" --disable-lash
     $ make
     $ sudo make install
+    $ cd ..
+    $ rm -rf timemachine
 
 ### Create `/dev/gpiomem`
 
@@ -89,19 +90,20 @@ Log out and log in again.
 
 ### Install Python and dependencies
 
-    $ sudo apt-get update
     $ sudo apt-get install python3 python3-pip
-    
-### Install Python-OSC
-
     $ sudo pip3 install python-osc
-    
-### Install RPi.GPIO
-
     $ sudo pip3 install RPi.GPIO
 
 ### Install the JellyJamPreserve script
 
     $ git clone https://github.com/robertodealmeida/jellyjampreserve.git
+    
+And to have it start at boot:
+
+    $ crontab -e
+    
+Add this line:
+
+    @reboot /home/pi/jellyjampreserve/start.sh
 
 ## Wire it up
