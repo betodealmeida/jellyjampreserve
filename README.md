@@ -16,7 +16,13 @@ In other words, if you turn the switch on at 1:05 pm and turn it off at 1:30 pm 
 
 ## Pre-built image
 
-I'll make a pre-built image available here. In the meantime, follow the manual installation.
+The easiest way to use JellyJamPreserve is to download the pre-built image:
+
+1. Download [jellyjampreserve.zip](https://www.amazon.com/clouddrive/share/uGG1XANRI8ByEDcit4V7DIRlXFjQkRCkqQaHtzuCr3K?ref_=cd_ph_share_link_copy)
+2. Unzip the file.
+3. [Write the image](https://www.raspberrypi.org/documentation/installation/installing-images/) `jellyjampreserve.img` to an SD card
+4. Insert the SD card into a computer and edit the file `wpa_supplicant.conf`, putting your WiFi credentials.
+
 
 ## Manual installation
 
