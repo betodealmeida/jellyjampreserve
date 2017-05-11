@@ -11,6 +11,7 @@ In other words, if you turn the switch on at 1:05 pm and turn it off at 1:30 pm 
 - **A Raspberry Pi**. Any Raspberry Pi should work. I use a Pi 1 Model B because I had a few of them unused at home.
 - **An SD card**. The files are recorded as WAV, and take approximately 20 MB per minute. I use a 32 GB SD card.
 - **A USB sound card**. We need a way to capture sound. Any cheap USB soundcard should work, just make sure it has a stereo input. I use [this one](https://www.amazon.com/Behringer-U-Control-Ultra-Low-Interface-Software/dp/B0023BYDHK/ref=pd_cp_267_1?_encoding=UTF8&pd_rd_i=B0023BYDHK&pd_rd_r=75GMM5E61DTF7X07XWVM&pd_rd_w=oyXT9&pd_rd_wg=4cPAX&psc=1&refRID=75GMM5E61DTF7X07XWVM).
+- **A WiFi card**. This will allow you to get the files with the recordings from the Pi. Remember that some models of the Pi already have WiFi (the 3 and the Zero W, as of this writing).
 - **A switch**, to start/stop recording.
 - **An LED**, to indicate when the JellyJamPreserve is recording. Because LEDs are cool.
 
@@ -21,8 +22,11 @@ The easiest way to use JellyJamPreserve is to download the pre-built image:
 1. Download the file [jellyjampreserve.zip](https://www.amazon.com/clouddrive/share/uGG1XANRI8ByEDcit4V7DIRlXFjQkRCkqQaHtzuCr3K?ref_=cd_ph_share_link_copy)
 2. Unzip the file.
 3. [Write the image](https://www.raspberrypi.org/documentation/installation/installing-images/) `jellyjampreserve.img` to an SD card
-4. Insert the SD card into a computer and edit the file `wpa_supplicant.conf`, putting your WiFi credentials.
+4. Insert the SD card into a computer and edit the file `wpa_supplicant.conf` with your WiFi credentials.
+5. Put the card in a Raspberry Pi and turn it on.
+6. Log in to the Pi and expand the filesystem ([instructions](#expand-filesystem))
 
+Now proceed to the [Wire it up](#wire-it-up) section.
 
 ## Manual installation
 
