@@ -118,7 +118,7 @@ By adding this line:
 
     @reboot /home/pi/jellyjampreserve/start.sh >> /home/pi/jellyjampreserve.log 2>&1
     
-The script will start the Jack daemon, Timemachine, and a Python script that listen for events from the switch and starts/stops Timemachine.
+The script will start the Jack daemon, Timemachine, and a Python script that listens for events from the switch and starts/stops Timemachine.
 
 ## Wire it up
 
