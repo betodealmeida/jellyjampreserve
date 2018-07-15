@@ -20,5 +20,5 @@ echo "Connecting system capture to playback"
 /usr/local/bin/jack_connect system:capture_2 system:playback_2
 /usr/local/bin/jack_lsp -c
 
-echo "Starting JellyJamPreserver"
+echo "Starting JellyJamPreserve"
 python3 /home/pi/jellyjampreserve/jellyjampreserve.py &
