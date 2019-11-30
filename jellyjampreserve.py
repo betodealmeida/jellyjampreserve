@@ -8,7 +8,7 @@ import RPi.GPIO as GPIO
 
 
 HOST = '127.0.0.1'
-PORT = 7133
+PORT = 7777
 SWITCH = 2
 LED = 3
 
@@ -17,16 +17,18 @@ GPIO.setup(LED, GPIO.OUT)
 GPIO.output(LED, GPIO.LOW)
 GPIO.setup(SWITCH, GPIO.IN)
 
+START = OscMessageBuilder('/jack_capture/tm/start').build()
+STOP = OscMessageBuilder('/jack_capture/tm/stop').build()
+client = UDPClient(HOST, PORT)
+
 
 def callback(gpio_id):
-    client = UDPClient(HOST, PORT)
     if GPIO.input(gpio_id) == 0:
-        msg = OscMessageBuilder('/start').build()
         GPIO.output(LED, GPIO.HIGH)
+        client.send(START)
     else:
-        msg = OscMessageBuilder('/stop').build()
         GPIO.output(LED, GPIO.LOW)
-    client.send(msg)
+        client.send(STOP)
 
 
 def main():
