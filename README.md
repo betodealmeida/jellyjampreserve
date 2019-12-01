@@ -1,6 +1,6 @@
 # JellyJamPreserve
 
-JellyJamPreserve is a Raspberry Pi project that uses [`jack\_capture`](https://github.com/kmatheussen/jack_capture) to record audio on the toggle of a switch. It continuously records audio into a 5 minute circular buffer, and when the switch is turned on the buffer is dumped to a file and it starts recording audio to the file until the switch is turned off. This way you can preserve any cool improvisations by recording **sounds from the past**!
+JellyJamPreserve is a Raspberry Pi project that uses [`jack_capture`](https://github.com/kmatheussen/jack_capture) to record audio on the toggle of a switch. It continuously records audio into a 5 minute circular buffer, and when the switch is turned on the buffer is dumped to a file and it starts recording audio to the file until the switch is turned off. This way you can preserve any cool improvisations by recording **sounds from the past**!
 
 In other words, if you turn the switch on at 1:05 pm and turn it off at 1:30 pm you will have an audio file with a recording from 1:00 pm to 1:30 pm. If you come up with an amazing riff while playing your guitar just turn on the switch and keep playing.
 
