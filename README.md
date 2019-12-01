@@ -1,6 +1,6 @@
 # JellyJamPreserve
 
-JellyJamPreserve is a Raspberry Pi project that uses the [Jack Timemachine](http://plugin.org.uk/timemachine/) to record audio on the toggle of a switch. It continuously records audio into a 5 minute circular buffer, and when the switch is turned on the buffer is dumped to a file and it starts recording audio to the file until the switch is turned off. This way you can preserve any cool improvisations by recording **sounds from the past**!
+JellyJamPreserve is a Raspberry Pi project that uses [`jack\_capture`](https://github.com/kmatheussen/jack_capture) to record audio on the toggle of a switch. It continuously records audio into a 5 minute circular buffer, and when the switch is turned on the buffer is dumped to a file and it starts recording audio to the file until the switch is turned off. This way you can preserve any cool improvisations by recording **sounds from the past**!
 
 In other words, if you turn the switch on at 1:05 pm and turn it off at 1:30 pm you will have an audio file with a recording from 1:00 pm to 1:30 pm. If you come up with an amazing riff while playing your guitar just turn on the switch and keep playing.
 
@@ -84,16 +84,14 @@ Edit the file `/etc/security/limits.conf` and add at the bottom:
 
 Log out and log in again.
 
-### Install Timemachine
+### Install `jack_capture`
 
-    $ sudo apt-get install automake autoconf liblo-dev libgtk2.0-dev tmux
-    $ git clone https://github.com/swh/timemachine.git
-    $ cd timemachine
-    $ ./autogen.sh LIBS="-lm" --disable-lash
-    $ make
+    $ git clone https://github.com/kmatheussen/jack_capture.git
+    $ cd jack_capture
+    $ LDFLAGS=-latomic make
     $ sudo make install
     $ cd ..
-    $ rm -rf timemachine
+    $ rm -rf jack_capture
 
 ### Create `/dev/gpiomem`
 
@@ -118,7 +116,7 @@ By adding this line:
 
     @reboot /home/pi/jellyjampreserve/start.sh >> /home/pi/jellyjampreserve.log 2>&1
     
-The script will start the Jack daemon, Timemachine, and a Python script that listens for events from the switch and starts/stops Timemachine.
+The script will start the Jack daemon, `jack_capture`, and a Python script that listens for events from the switch and starts/stops `jack_capture`.
 
 ## Wire it up
 
@@ -139,5 +137,3 @@ Here's how I did it, slightly different from the Fritzing diagram:
 ## Getting the files
 
 There are many ways to get the recordings from the Pi. You can have Dropbox or [Syncthing](https://syncthing.net/) running in the Pi to automatically synchronize the files with another machine. I prefer to just use `scp` in Linux (in Windows you can use [WinSCP](https://winscp.net/eng/index.php)).
-
-The Pi is available at the address `jellyjampreserve.local`, and you can log in as user `pi`, password `raspberry`. All the recordings are stored in the directory `/home/pi/recordings/` with an ISO 8601 timestamp of when the recording started (ie, 5 minutes before the switch was toggled).
