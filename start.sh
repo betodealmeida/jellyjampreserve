@@ -12,7 +12,7 @@ echo "Starting JACK server"
 mkdir -p /home/pi/recordings/
 sleep 5
 echo "Starting Timemachine"
-tmux new-session -d 'jack_capture -O 7777 --format mp3 --mp3 --filename-prefix /home/pi/recordings/ --port system:capture_1 --port system:capture_2 --timemachine --timemachine-prebuffer 300'
+tmux new-session -d '/usr/local/bin/jack_capture -O 7777 --format mp3 --mp3 --filename-prefix /home/pi/recordings/ --port system:capture_1 --port system:capture_2 --timemachine --timemachine-prebuffer 300'
 
 # connections
 echo "Connecting system capture to playback"
