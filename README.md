@@ -19,7 +19,7 @@ In other words, if you turn the switch on at 1:05 pm and turn it off at 1:30 pm 
 
 ### Install Raspbian
 
-[Install Raspbian](https://www.google.com/search?q=install+raspbian) and make sure you can log into the Raspberry Pi. The instructions below are for Raspbian Jessie.
+[Install Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) and make sure you can log into the Raspberry Pi. The instructions below are for Debian version: 11 (bullseye).
 
 ### Expand filesystem
 
@@ -49,37 +49,12 @@ You can verify the order using the `aplay` command. After a reboot the USB card 
     
 [Read more here](https://raspberrypi.stackexchange.com/questions/40831/how-do-i-configure-my-sound-for-jasper-on-raspbian-jessie).
 
-### Install jackd2
-
-We need to compile jackd2 from scratch without d-bus support:
+### Install `jackd` and `jack_capture`
 
     $ sudo apt-get update
-    $ sudo apt-get install git build-essential alsa-base libasound2-dev libsamplerate0-dev libsndfile1-dev libreadline-dev
-    $ git clone git://github.com/jackaudio/jack2 --depth 1
-    $ cd jack2
-    $ ./waf configure --alsa
-    $ ./waf build
-    $ sudo ./waf install
-    $ sudo ldconfig
-    $ cd ..
-    $ rm -rf jack2
+    $ sudo apt-get install jackd jack-capture tmux
     
-Edit the file `/etc/security/limits.conf` and add at the bottom:
-
-    @audio - memlock 256000
-    @audio - rtprio 75
-
 Log out and log in again.
-
-### Install `jack_capture`
-
-    $ sudo apt-get install liblo-dev libmp3lame-dev tmux
-    $ git clone https://github.com/kmatheussen/jack_capture.git
-    $ cd jack_capture
-    $ LDFLAGS=-latomic make
-    $ sudo make install
-    $ cd ..
-    $ rm -rf jack_capture
 
 ### Create `/dev/gpiomem`
 
